@@ -48,6 +48,7 @@ main{
 }
 
 .login-rectangle{
+    opacity: 0.8;
     margin-top: 50px;
     margin-left: 250px;
     width: 45%;
