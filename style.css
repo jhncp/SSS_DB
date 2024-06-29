@@ -1,6 +1,9 @@
 body{
     margin: 0;
-    background-color: #32579E;
+    background-image: url('bg3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 main{
@@ -50,7 +53,7 @@ main{
 .login-rectangle{
     opacity: 0.8;
     margin-top: 50px;
-    margin-left: 250px;
+    margin-left: 300px;
     width: 45%;
     left: 50px;
     position: relative;
@@ -161,7 +164,7 @@ h2.login{
     color: #32579E;
     font-family: Poppins;
     font-weight: bold;
-    width: 1050p
+    width: 1050px;
 }
 
 .create-rectangle{
@@ -178,7 +181,7 @@ h2.login{
 
 .create-rectangle button{
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 210px;
     height: 30px;
     background-color: #32579E;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
@@ -198,10 +201,11 @@ h2.login{
 }
 
 .accForm{
-    margin-left: 170px;
+    align-items: center;
 }
 
 .accForm label{
+    margin-left: 170px;
     text-indent: 10px;
     color: #32579E;
     font-family: Poppins;
@@ -210,6 +214,7 @@ h2.login{
 }
 
 .accForm input{
+    margin-left: 170px;
     height: 35px;
     border-radius: 10px;
     border: 3px solid #8FB2F4;
@@ -229,3 +234,4 @@ h2.login{
     font-size: 20px;
     text-indent: 10px;
 }
+
