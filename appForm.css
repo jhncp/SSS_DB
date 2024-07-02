@@ -1,0 +1,301 @@
+body {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple buttons */
+}
+
+main{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header{
+    background-color: #32579E;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    height: 70px;
+    text-align: center;
+    color: #fff;
+    font-family: Poppins;
+}
+
+.PH{
+    position: absolute;
+    top: 0px;
+    left: 143px;
+    font-size: 25;
+    font-weight: 500;
+}
+
+.SSS{
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.header img{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+}
+
+nav{
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    left: 360px;
+}
+
+.content-container {
+    background-image: url('ssbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    opacity: 0.9;
+}
+
+/* General styles */
+.main button {
+    border: none;
+    border-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    height: 45px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+
+}
+
+.main button:hover {
+    background-color: #8fb2f4;
+    color: white;
+}
+
+
+.label {
+    padding: 12px;
+    color: #002877;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.fields {
+    margin: 60px;
+}
+
+.fields label {
+    padding: 20px;
+    color: #002877;
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+::placeholder {
+    color: #808080;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+/* Form input styles */
+.ssno, .Memname, .MemAdd, .birthInfo, .genCS, .tin, .memPOB, .memDOB, .tel {
+    margin-left: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.ssno input,
+.Memname input,
+.MemAdd input,
+.birthInfo input[type="date"],
+.birthInfo input[type="text"],
+.genCS select[id="gender"],
+.genCS select[id="cStatus"],
+.tin input,
+.tel input,
+.memPOB input {
+    height: 45px;
+    width: auto;
+    border-radius: 10px;
+    border: 2px solid #0039A9;
+    color: #808080;
+    font-family: Poppins;
+    font-size: 18px;
+    text-indent: 8px;
+}
+
+.MemAdd input {
+    width: 230;
+}
+
+
+
+/* Additional section styles */
+.adPen, .currSSS, .tyPen {
+    text-align: center;
+    padding: 16px;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: center;
+}
+
+.tyPen select[id="typePension"] {
+    margin-top: 12px;
+    margin-left: 16px;
+    height: 45px;
+    width: 240px;
+    border-radius: 20px;
+    border: 3px solid #0039A9;
+    color: #808080;
+    font-family: Poppins;
+    font-size: 18px;
+    text-indent: 8px;
+}
+
+
+/* Employment History Tab */
+.employerName{display: inline-block;
+    margin-left: 0px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    text-indent: 8px;
+}
+
+/* Employment Container */
+.fields button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Delete buttons */
+.employment button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dependent button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.employment button:hover {
+    background-color: gray;
+}
+
+.dependent button:hover {
+    background-color: gray;
+}
+
+
+/* next and previous buttons */
+#nextbtn1,
+#nextbtn2,
+#prevbtn2,
+#prevbtn3,
+#submitBtn {
+    font-family: poppins;
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 20px;
+    margin: 10px;
+    background-color: #002877;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#prevbtn2, #prevbtn3 {
+    background-color: #5481d3;
+}
+
+#submitBtn {
+    background-color: #4CAF50;
+}
+
+
+
+  /* Tabs section */
+.tabs {
+    margin: 0 auto;
+    display: flex;
+    margin-left: 230px;
+}
+
+.tab-link {
+    padding: 0px 30px;
+    font-weight: bold;
+    color: #333;
+    background-color: #5481d3;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.tab-link.active {
+    box-shadow: inset 0 1px 0 #ddd;
+    background-color: #f0f0f0;
+    color: #8fb2f4;
+    font-size: large;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.tab-link:hover {
+    text-decoration: none;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+@media screen and (min-width: 768px) {
+    #tab-2 .employment .employer-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

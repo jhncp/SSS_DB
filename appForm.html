@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url('bg3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .button-container::before {
+            content: "\2630";
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .button-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .button-container::before {
+                display: block;
+            }
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        .employment {
+            margin-top: 10px;
+            padding: 12px;
+            color: #002877;
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+
+        .employment .employer-info {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .employment .employer-info label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .employment .employer-info input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .dependent {
+            margin-top: 10px;
+        }
+
+        .dependent .child {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dependent label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .dependent input,
+        .dependent select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ss.png">
+    <link rel="stylesheet" href="appForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Member's Information</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="page 1.html">
+                <img src="ss.png" alt="SSS"></a>
+            <p class="PH">Republic of the Philippines</p>
+            <p class="SSS">Social Security System</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-link active" data-tab="tab-1">Member's Information</button>
+            <button class="tab-link" data-tab="tab-2">Employment History</button>
+            <button class="tab-link" data-tab="tab-3">Dependent Children</button>
+        </div>
+
+        <div class="content-container">
+            <form id="memberForm">
+                <div id="tab-1" class="tab-content active">
+                    <div class="label">
+                        <label for="label">Member's Information</label>
+                        <div class="fields">
+                            <div class="ssno">
+                                <label for="SSno">SSS Number</label>
+                                <input type="number" id="SSno" placeholder="SSS Number" min="0" maxlength="10" required>
+                            </div>
+
+                            <div class="Memname">
+                                <label for="Memname">Name of Member</label>
+                                <div class="name">
+                                    <input type="text" id="lastName" placeholder="Surname" required>
+                                    <input type="text" id="firstName" placeholder="First Name" required>
+                                    <input type="text" id="middleName" placeholder="Middle Name">
+                                </div>
+                            </div>
+
+                            <div class="MemAdd">
+                                <label for="MemAdd">Address</label>
+                                <div class="address">
+                                    <input type="text" id="street" placeholder="No., Street & Subdivision" required>
+                                    <input type="text" id="brgy" placeholder="Barangay" required>
+                                    <input type="text" id="town" placeholder="Town/District" required>
+                                    <input type="text" id="city" placeholder="City/Province" required>
+                                </div>
+                            </div>
+
+                            <div class="birthInfo">
+                                <label for="memDOB">Date of Birth</label>
+                                <input type="date" id="memDOB" placeholder="mm/dd/yyyy" required>
+                                <label for="memPOB">Place of Birth</label>
+                                <div class="POB">
+                                    <input type="text" id="memPOB" placeholder="Town/District" required>
+                                    <input type="text" id="memPOB" placeholder="City/Province" required>
+                                </div>
+                            </div>
+
+                            <div class="genCS">
+                                <label for="memGen">Gender</label>
+                                <select id="gender" required>
+                                    <option value="gend">Gender</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                                <label for="memCS">Civil Status</label>
+                                <select id="cStatus" required>
+                                    <option value="cs">Civil Status</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="legalseparated">Legally Separated</option>
+                                    <option value="widow">Widow/Widower</option>
+                                </select>
+                            </div>
+
+                            <div class="adPen">
+                                <label>Do you want to receive the first 18 monthly pension in advance?</label>
+                                <div class="yesOrno">
+                                    <input type="radio" id="trueAdvPension" value="True" name="advPension" required>
+                                    <label for="trueAdvPension">Yes</label>
+                                    <input type="radio" id="falseAdvPension" value="False" name="advPension" required>
+                                    <label for="falseAdvPension">No</label>
+                                </div>
+                            </div>
+
+                            <div class="currSSS">
+                                <label>Are you currently receiving SSS pension?</label>
+                                <div class="yesOrno">
+                                    <input type="radio" id="trueCurrSSS" value="True" name="curSSS" required>
+                                    <label for="trueCurrSSS">Yes</label>
+                                    <input type="radio" id="falseCurrSSS" value="False" name="curSSS" required>
+                                    <label for="falseCurrSSS">No</label>
+                                </div>
+                            </div>
+
+                            <div class="tyPen">
+                                <label for="typePension">If currently receiving SSS pension, input the type of pension:</label>
+                                <select id="typePension">
+                                    <option value="">Type of Pension</option>
+                                    <option value="death">Death</option>
+                                    <option value="disability">Disability</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="nextbtn1" onclick="navigateTab('tab-2')">Next</button>
+                </div>
+
+                <div id="tab-2" class="tab-content">
+                    <div class="fields">
+                        <div class="label2">
+                            <label for="label2">Employment History</label>
+                        </div>
+                        <!-- Employment History Fields -->
+                        <div class="employment" id="employmentContainer">
+                            <!-- This is where dynamically added employment history will go -->
+                        </div>
+                        <button type="button" id="addEmploymentBtn">Add Employment Record</button>
+                    </div>
+                    <button type="button" id="prevbtn2" onclick="navigateTab(-1)">Previous</button>
+                    <button type="button" id="nextbtn2" onclick="navigateTab(1)">Next</button>
+
+                </div>
+
+                <div id="tab-3" class="tab-content">
+                    <div class="fields">
+                        <div class="label3">
+                            <label for="label3">Dependent Children</label>
+                        </div>
+                        <!-- Dependent Children Fields -->
+                        <div class="dependent" id="dependentContainer">
+                            <!-- This is where dynamically added children will go -->
+                        </div>
+                        <button type="button" id="addChildBtn">Add Child</button>
+                    </div>
+                    <button type="button" id="prevbtn3" onclick="navigateTab('tab-2')">Previous</button>
+                    <button type="submit" id="submitBtn" onclick="submitForm()">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        // Counter for tracking number of added children and employers
+        let childCounter = 1;
+        let employerCounter = 1;
+
+        // Function to add a new set of child fields
+        function addNewChildFields() {
+            const container = document.getElementById('dependentContainer');
+
+            const newChildFields = document.createElement('div');
+            newChildFields.classList.add('child');
+            newChildFields.id = `child${childCounter}`;
+            newChildFields.innerHTML = `
+                <label for="childName${childCounter}">Name of Child</label>
+                <input type="text" id="childName${childCounter}" placeholder="Enter Name of Child" required>
+                <label for="childDOB${childCounter}">Date of Birth</label>
+                <input type="date" id="childDOB${childCounter}" required>
+                <label for="childLegitimacy${childCounter}">Legitimacy</label>
+                <select id="childLegitimacy${childCounter}" required>
+                    <option value="">Select Legitimacy</option>
+                    <option value="legitimate">Legitimate</option>
+                    <option value="illegitimate">Illegitimate</option>
+                </select>
+                <label for="childAddress${childCounter}">Address</label>
+                <input type="text" id="childAddress${childCounter}" placeholder="Enter Address" required>
+                <button type="button" class="delete-btn" onclick="deleteChildRecord(${childCounter})">Delete</button>
+            `;
+
+            container.appendChild(newChildFields);
+            childCounter++;
+        }
+
+        // Function to delete a set of child fields
+        function deleteChildRecord(childId) {
+            const childFields = document.getElementById(`child${childId}`);
+            childFields.remove();
+        }
+
+        // Function to add a new set of employer fields
+        function addNewEmployerFields() {
+            const container = document.getElementById('employmentContainer');
+
+            const newEmployerFields = document.createElement('div');
+            newEmployerFields.classList.add('employer-info');
+            newEmployerFields.id = `employer${employerCounter}`;
+            newEmployerFields.innerHTML = `
+                <label for="employerName${employerCounter}">Name of Employer</label>
+                <input type="text" id="employerName${employerCounter}" placeholder="Employer's Name" required>
+                <label for="employerAddress${employerCounter}">Address</label>
+                <input type="text" id="employerAddress${employerCounter}" placeholder="Employer's Address" required>
+                <label for="startDate${employerCounter}">Period of Employment (From)</label>
+                <input type="month" id="startDate${employerCounter}" required>
+                <label for="endDate${employerCounter}">Period of Employment (To)</label>
+                <input type="month" id="endDate${employerCounter}" required>
+                <button type="button" class="delete-btn" onclick="deleteEmployerRecord(${employerCounter})">Delete</button>
+            `;
+
+            container.appendChild(newEmployerFields);
+            employerCounter++;
+        }
+
+        // Function to delete a set of employer fields
+        function deleteEmployerRecord(employerId) {
+            const employerFields = document.getElementById(`employer${employerId}`);
+            employerFields.remove();
+        }
+
+        // Add event listeners to the "Add Child" and "Add Employment" buttons
+        document.getElementById('addChildBtn').addEventListener('click', addNewChildFields);
+        document.getElementById('addEmploymentBtn').addEventListener('click', addNewEmployerFields);
+
+       // Function to handle navigation to the next or previous tab
+function navigateTab(direction) {
+    const activeTab = document.querySelector('.tab-content.active');
+    let nextTab;
+
+    if (direction === 1) {
+        nextTab = activeTab.nextElementSibling;
+    } else if (direction === -1) {
+        nextTab = activeTab.previousElementSibling;
+    } else {
+        return;
+    }
+
+    if (nextTab) {
+        activeTab.classList.remove('active');
+        nextTab.classList.add('active');
+
+        // Update active tab link
+        document.querySelector('.tab-link.active').classList.remove('active');
+        document.querySelector(`button[data-tab="${nextTab.id}"]`).classList.add('active');
+    }
+}
+
+// Add event listeners to the "Next" and "Previous" buttons for each tab
+document.getElementById('nextbtn1').addEventListener('click', () => navigateTab(1));
+document.getElementById('prevbtn2').addEventListener('click', () => navigateTab(-1));
+document.getElementById('nextbtn2').addEventListener('click', () => navigateTab(1));
+document.getElementById('prevbtn3').addEventListener('click', () => navigateTab(-1));
+
+// Function to handle form submission
+function submitForm() {
+    const isConfirmed = confirm("Once submitted, your application cannot be edited. Please confirm you are ready to finalize your submission.");
+    return isConfirmed; // If the user clicks "OK", the form will be submitted; otherwise, submission is canceled
+}
+
+
+        // Add click event listeners to all tab links
+        document.querySelectorAll('.tab-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabNumber = button.getAttribute('data-tab');
+
+                document.querySelectorAll('.tab-link').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                button.classList.add('active');
+                document.getElementById(tabNumber).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
