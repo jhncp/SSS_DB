@@ -261,7 +261,10 @@ document.getElementById('prevbtn3').addEventListener('click', () => navigateTab(
 // Function to handle form submission
 function submitForm() {
     const isConfirmed = confirm("Once submitted, your application cannot be edited. Please confirm you are ready to finalize your submission.");
-    return isConfirmed; // If the user clicks "OK", the form will be submitted; otherwise, submission is canceled
+   if (isConfirmed) {
+        alert("Form Submitted!");
+        return true; // Allow the form to be submitted
+    } 
 }
 
 
