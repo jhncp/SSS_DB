@@ -1,9 +1,10 @@
-body{
+body {
     margin: 0;
     background-image: url('bg3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    font-family: 'Poppins';
 }
 
 main{
@@ -50,71 +51,79 @@ main{
     object-fit: cover;
 }
 
-.login-rectangle{
-    opacity: 0.8;
-    margin-top: 50px;
-    margin-left: 300px;
-    width: 45%;
-    left: 50px;
-    position: relative;
+.main-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    background-color: white;
-    height: 350px;
+    height:  100px
 }
 
-.login-rectangle button{
-    margin-top: 10px;
-    margin-left: 90px;
-    height: 30px;
+.login-rectangle {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2.login {
+    font-size: 30px;
+    font-weight: 700;
+    color: #32579E;
+    margin-bottom: 20px;
+}
+
+.admLog {
+    text-align: center;
+}
+
+.admLog label {
+    display: block;
+    text-align: left;
+    color: #32579E;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.admLog input {
+    width: 80%;
+    height: 35px;
+    border-radius: 10px;
+    border: 3px solid #8FB2F4;
+    color: #32579E;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.login-rectangle button {
+    width: 80%;
+    height: 40px;
     background-color: #32579E;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     color: white;
     border: 2px solid #32579E;
     border-radius: 10px;
-    font-family: Poppins;
     font-size: 18px;
     font-weight: 500;
     transition-duration: 0.4s;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.login-rectangle button:hover{
-    background-color: #8FB2F4; /* Green */
+.login-rectangle button:hover {
+    background-color: #8FB2F4;
     color: white;
 }
 
-h2.login{
-    padding: 20px;
-    font-size: 30px;
-    font-family: Poppins;
-    font-weight: 700;
-    color: #32579E;
-}
+/* Additional styling for other components */
 
-.admLog{
-    margin-left: 170px;
-}
-
-.admLog label{
-    text-indent: 10px;
-    color: #32579E;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.admLog input{
-    height: 35px;
-    border-radius: 10px;
-    border: 3px solid #8FB2F4;
-    color: #32579E;
-    font-family: Poppins;
-    font-size: 20px;
-    text-indent: 10px;
-}
-
-.rectangle{
+.rectangle {
     margin-top: 15px;
     margin-left: 50px;
     width: 85%;
@@ -126,7 +135,7 @@ h2.login{
     height: 450px;
 }
 
-.rectangle button{
+.rectangle button {
     margin-top: 10px;
     margin-left: 10px;
     height: 30px;
@@ -135,103 +144,108 @@ h2.login{
     color: white;
     border: 2px solid #32579E;
     border-radius: 10px;
-    font-family: Poppins;
     font-size: 18px;
     font-weight: 500;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.rectangle button:hover{
-    background-color: #8FB2F4; /* Green */
+.rectangle button:hover {
+    background-color: #8FB2F4;
     color: white;
 }
 
-.member th{
+.member th {
     color: #32579E;
-    font-family: Poppins;
     font-weight: bold;
 }
 
-.empHisto th{
+.empHisto th,
+.depChild th {
     color: #32579E;
-    font-family: Poppins;
-    font-weight: bold;
-    width: 1050px;
-}
-
-.depChild th{
-    color: #32579E;
-    font-family: Poppins;
     font-weight: bold;
     width: 1050px;
 }
 
-.create-rectangle{
+.create-rectangle {
     margin-top: 50px;
-    margin-left: 250px;
+    margin-left: auto;
+    margin-right: auto;
     width: 45%;
-    left: 50px;
-    position: relative;
-    align-items: center;
+    padding: 20px;
     border-radius: 20px;
-    background-color: white;
-    height: 550px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
 }
 
-.create-rectangle button{
-    margin-top: 10px;
-    margin-left: 210px;
-    height: 30px;
+.create-rectangle .log {
+    margin-bottom: 20px;
+}
+
+.create-rectangle .accForm {
+    text-align: center;
+}
+
+.create-rectangle label {
+    display: block;
+    text-align: left;
+    color: #32579E;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.create-rectangle button {
+    width: 80%;
+    height: 40px;
     background-color: #32579E;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     color: white;
     border: 2px solid #32579E;
     border-radius: 10px;
-    font-family: Poppins;
     font-size: 18px;
     font-weight: 500;
     transition-duration: 0.4s;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.login-rectangle button:hover{
-    background-color: #8FB2F4; /* Green */
+.create-rectangle button:hover {
+    background-color: #8FB2F4;
     color: white;
 }
 
-.accForm{
+.accForm {
     align-items: center;
 }
 
-.accForm label{
-    margin-left: 170px;
-    text-indent: 10px;
+.accForm label {
+    display: block;
+    text-align: left;
     color: #32579E;
-    font-family: Poppins;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.accForm input{
-    margin-left: 170px;
+.accForm input {
+    width: 100%;
+    max-width: 300px;
     height: 35px;
     border-radius: 10px;
     border: 3px solid #8FB2F4;
     color: #32579E;
-    font-family: Poppins;
     font-size: 20px;
-    text-indent: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
 
-.accForm input[type="date"]{
-    height: 35px;
-    width: 250px;
-    border-radius: 10px;
-    border: 3px solid #8FB2F4;
-    color: #32579E;
-    font-family: Poppins;
-    font-size: 20px;
-    text-indent: 10px;
+.accForm input[type="date"] {
+    width: 100%;
+    max-width: 300px; 
 }
-
