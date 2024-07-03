@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     margin: 0;
 }
 
@@ -42,6 +42,71 @@ body {
 
 .tab-content.active {
     display: block;
+}
+
+main{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header{
+    background-color: #32579E;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    height: 70px;
+    text-align: center;
+    color: #fff;
+    font-family: Poppins;
+}
+
+.PH{
+    position: absolute;
+    top: 0px;
+    left: 143px;
+    font-size: 25;
+    font-weight: 500;
+}
+
+.SSS{
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.header img{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+}
+
+nav{
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    left: 360px;
+}
+
+.content-container {
+    background-image: url('ssbg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    opacity: 0.9;
 }
 .employment {
     margin-top: 10px;
@@ -98,72 +163,6 @@ body {
     border: px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-main{
-    width: 100%;
-    position: relative;
-    background-color: white;
-    overflow: hidden;
-    text-align: center;
-}
-
-.header{
-    background-color: #32579E;
-    display: flex;
-    padding: 20px;
-    position: relative;
-    height: 70px;
-    text-align: center;
-    color: #fff;
-    font-family: Poppins;
-}
-
-.PH{
-    position: absolute;
-    top: 0px;
-    left: 143px;
-    font-size: 25;
-    font-weight: 500;
-}
-
-.SSS{
-    position: absolute;
-    top: 0px;
-    left: 140px;
-    font-size: 36px;
-    font-weight: bolder;
-}
-
-.header img{
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    width: 120px;
-    height: 90px;
-    object-fit: cover;
-}
-
-nav{
-    position: absolute;
-    display: block;
-    margin-top: 10px;
-    left: 360px;
-}
-
-.content-container {
-    background-image: url('ssbg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ffffff;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    margin: 0 auto;
-    max-width: 1200px;
-    opacity: 0.9;
 }
 
 /* General styles */
