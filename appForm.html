@@ -10,17 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
     <title>Member's Information</title>
+
+    <div class="header">
+        <a href="page 1.html">
+            <img src="ss.png" alt="SSS"></a>
+        <p class="PH">Republic of the Philippines</p>
+        <p class="SSS">Social Security System</p>
+    </div>
+
 </head>
 
 <body>
     <div class="main">
-        <div class="header">
-            <a href="page 1.html">
-                <img src="ss.png" alt="SSS"></a>
-            <p class="PH">Republic of the Philippines</p>
-            <p class="SSS">Social Security System</p>
-        </div>
-
         <div class="tabs">
             <button class="tab-link active" data-tab="tab-1">Member's Information</button>
             <button class="tab-link" data-tab="tab-2">Employment History</button>
@@ -261,7 +262,7 @@ document.getElementById('prevbtn3').addEventListener('click', () => navigateTab(
 // Function to handle form submission
 function submitForm() {
     const isConfirmed = confirm("Once submitted, your application cannot be edited. Please confirm you are ready to finalize your submission.");
-   if (isConfirmed) {
+    if (isConfirmed) {
         alert("Form Submitted!");
         return true; // Allow the form to be submitted
     } 
@@ -289,4 +290,3 @@ function submitForm() {
 
 </body>
 </html>
-
